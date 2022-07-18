@@ -1,0 +1,11 @@
+
+.imgContainer{
+    overflow: hidden;
+    height: 20em;
+} 
+
+@media (max-width: 638px) {
+    .imgContainer{
+        height: 10em;
+    }
+}
