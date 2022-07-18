@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/coder-react/static/css/main.0cf5702c.css",
-    "main.js": "/coder-react/static/js/main.602f9df9.js",
-    "static/js/787.dbe63b45.chunk.js": "/coder-react/static/js/787.dbe63b45.chunk.js",
-    "static/media/samsung.jpg": "/coder-react/static/media/samsung.9b4a112176a29342395e.jpg",
-    "index.html": "/coder-react/index.html",
-    "static/media/cart.svg": "/coder-react/static/media/cart.05dfd14f0943edf68c9a30788565c795.svg",
-    "static/media/logo.svg": "/coder-react/static/media/logo.3b280b33e14c15bb95d3726e27b9cddf.svg",
-    "main.0cf5702c.css.map": "/coder-react/static/css/main.0cf5702c.css.map",
-    "main.602f9df9.js.map": "/coder-react/static/js/main.602f9df9.js.map",
-    "787.dbe63b45.chunk.js.map": "/coder-react/static/js/787.dbe63b45.chunk.js.map"
+    "main.css": "/coder-react-celustore/static/css/main.0cf5702c.css",
+    "main.js": "/coder-react-celustore/static/js/main.6d59b768.js",
+    "static/js/787.dbe63b45.chunk.js": "/coder-react-celustore/static/js/787.dbe63b45.chunk.js",
+    "static/media/samsung.jpg": "/coder-react-celustore/static/media/samsung.9b4a112176a29342395e.jpg",
+    "index.html": "/coder-react-celustore/index.html",
+    "static/media/cart.svg": "/coder-react-celustore/static/media/cart.05dfd14f0943edf68c9a30788565c795.svg",
+    "static/media/logo.svg": "/coder-react-celustore/static/media/logo.3b280b33e14c15bb95d3726e27b9cddf.svg",
+    "main.0cf5702c.css.map": "/coder-react-celustore/static/css/main.0cf5702c.css.map",
+    "main.6d59b768.js.map": "/coder-react-celustore/static/js/main.6d59b768.js.map",
+    "787.dbe63b45.chunk.js.map": "/coder-react-celustore/static/js/787.dbe63b45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0cf5702c.css",
-    "static/js/main.602f9df9.js"
+    "static/js/main.6d59b768.js"
   ]
 }
