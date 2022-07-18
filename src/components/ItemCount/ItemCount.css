@@ -1,0 +1,26 @@
+.input {
+  border: 0 !important;
+}
+
+.verMas {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center;
+  margin: auto;
+  margin-top: -15%;
+}
+
+.btnBg {
+  background-color: #2b2a2a !important;
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

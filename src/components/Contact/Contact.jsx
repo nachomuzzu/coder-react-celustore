@@ -6,7 +6,7 @@ import { Row, Col, Container } from "react-bootstrap";
 
 const Contact = () => {
     return (<>
-        <Container className='pt-5' id='contacto'>
+        <Container className='pt-5 pb-5' id='contacto'>
             <Row>
                 <h2 className='d-flex justify-content-center'>¡Recibí las últimas ofertas!</h2>
                 <Col xs={12} md={12} lg={12}>

@@ -30,16 +30,10 @@ function ItemListContainer(props) {
     []
   )
 
-  const onAddItem = (count) => {
-    alert(`${count} items van a ser añadidos al carrito!`);
-  }
-
   return (
     <>
       <div className='itemListcontainer'>
         <ItemList items={items} />
-        <ItemCount stock={5} initial={0} onAdd={onAddItem} />
-
       </div>
     </>)
 };

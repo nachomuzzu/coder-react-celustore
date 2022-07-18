@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Hero from './components/Hero/Hero';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Hero/>
     <ItemListContainer/>
     <Contact/>
+    <Footer/>
     </>
   );
 }

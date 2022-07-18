@@ -2,6 +2,16 @@ import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import Button from 'react-bootstrap/Button'
 import "./ItemList.css";
+import ItemCount from "../ItemCount/ItemCount";
+
+const onAddItem = (count) => {
+    if (count == 1) {
+        alert("¡1 item será añadido al carrito!")
+    }
+    else {
+        alert(`¡${count} items serán añadidos al carrito!`);
+    }
+}
 
 function ItemList(props) {
     return (
@@ -17,10 +27,9 @@ function ItemList(props) {
                                     <Card.Body>
                                         <Card.Title>{items.productName}</Card.Title>
                                         <Card.Text>${items.price}</Card.Text>
-                                        <Button className="btn-bg btn-light text-dark">Ver más</Button>
                                         <br></br>
-                                        <Button className="btn-dark mt-3">Agregar al carrito</Button>
                                     </Card.Body>
+                                    <ItemCount items={items} stock={items.stock} initial={0} onAdd={onAddItem} />
                                     <Card.Footer className="text-muted">Stock {items.stock}</Card.Footer>
                                 </Card>
                             </Col>

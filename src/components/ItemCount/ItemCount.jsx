@@ -1,6 +1,9 @@
 import { useState } from "react";
+import "./ItemCount.css"
+import Button from 'react-bootstrap/Button'
 
-const ItemCount = ({ stock = 2, initial = 0, onAdd }) => {
+
+const ItemCount = ({ items={items}, stock = items.stock, initial = 0, onAdd }) => {
     const [count, setCount] = useState(initial);
     const updateCount = (op) => {
         if (op === "-" && count > 0) {
@@ -16,36 +19,50 @@ const ItemCount = ({ stock = 2, initial = 0, onAdd }) => {
             setCount(isNaN(value) ? 0 : Number(value));
         }
     };
+    
+    function showMore(){
+
+    }
+
     return (
         <>
-            <div className="mt-5 mb-3 d-flex justify-content-center">
-                <input
-                    onChange={(e) => updateCountInput(e)}
-                    className="border-dark "
-                    placeholder=""
-                    value={count}
-                    type="number"
-                />
-                <button
+            <div className="justify-content-center">
+
+            <button
+                    onClick={() => showMore()}
+                    className="verMas btn btn-light mb-2"
+                    type="button"
+                >
+                    Ver más
+                </button>
+            <button
                     onClick={() => updateCount("-")}
-                    className="btn btn-dark ms-2"
+                    className="btn btn-dark btnBg me-2 mb-2"
                     type="button"
                 >
                     -
                 </button>
+                <input
+                    onChange={(e) => updateCountInput(e)}
+                    className="text-center input border-dark w-25 mb-2"
+                    placeholder=""
+                    value={count}
+                    type="number"
+                />
+
                 <button
                     onClick={() => updateCount("+")}
-                    className="btn btn-dark ms-2"
+                    className="btn btn-dark btnBg ms-2 mb-2"
                     type="button"
                 >
                     +
                 </button>
             </div>
-            <div className="d-flex justify-content-center mb-5">
+            <div className="d-flex justify-content-center mb-2">
                 <button
                     onClick={() => onAdd(count)}
                     type="button"
-                    className="btn btn-dark"
+                    className="btn btn-dark btnBg"
                     disabled={count === "" || count === 0}
                 >
                     Agregar al carrito
