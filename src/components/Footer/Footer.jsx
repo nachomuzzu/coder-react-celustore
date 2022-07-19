@@ -12,7 +12,7 @@ const Footer = () => {
                     </Col>
                     <Col xs={12} md={6} lg={6} className="d-block justify-content-center">
                         <h2>Seguinos en nuestras redes sociales</h2>
-                        <div className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus dicta nostrum atque nisi, autem est suscipit sapiente deleniti aspernatur eum cupiditate error.</div>
+                        <div className="redes">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus dicta nostrum atque nisi, autem est suscipit sapiente deleniti aspernatur eum cupiditate error.</div>
                     </Col>
                     </Row>
             </div>

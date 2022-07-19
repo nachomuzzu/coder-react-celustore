@@ -1,0 +1,39 @@
+.itemDetailContainer{
+    font-weight: 400;
+    display: inline-block !important;
+}
+
+.btnContainer{
+    background-color: #2b2a2a !important;
+    margin-left: 24em;
+    width: 50%;
+    margin-top: 10em;
+}
+
+@media (max-width: 1200px) {
+    .btnContainer{
+        margin-left: 15em;
+    }
+    
+}
+
+@media (max-width: 990px) {
+    .btnContainer{
+        margin-left: 8em;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .btnContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .infoContainer{
+        display: block !important;
+        margin-top: 50em;
+    }
+    
+}

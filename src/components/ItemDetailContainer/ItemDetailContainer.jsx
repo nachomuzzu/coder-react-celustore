@@ -1,28 +1,24 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { resolvePath, useParams } from 'react-router-dom';
+import ItemDetail from '../ItemDetail/ItemDetail'
+import itemsData from "../../data/itemsData"
 
-function ItemListContainer(props) {
+const ItemDetailContainer = () => {
+  const [item, setItem] = useState({});
+  const { id } = useParams();
 
-    //Guardar datos en un estado 
-    const [items, setItems] = useState([]);
-  
-    //Crear promesa que retorne los datos
-  
-    useEffect(() => {
-      let promiseItems = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve();
-          reject("Ha ocurrido un error");
-        }, 2000);
-      })
-  
-      promiseItems.then(
-        (respuesta) => {
-          setItems(itemsData);
-        }
-      ).catch((error) => {
-        console.error(error);
-      })
-    },
-      []
-    )
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(itemsData), 2000)
+  });
+
+  useEffect(() => {
+    promise.then((response) => {
+      const foundItem = response.find(item => item.id === Number(id))
+      setItem(foundItem)
+    })
+  }, [])
+
+  return (<ItemDetail item={item} />);
 }
+
+export default ItemDetailContainer;

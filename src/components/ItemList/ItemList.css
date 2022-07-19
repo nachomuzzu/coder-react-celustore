@@ -13,6 +13,11 @@
 .btn-bg{
     background-color: #eeecec !important;
 }
+
+.btnClaro{
+    background-color: #f8f8f8 !important;
+  }
+
 #cardGroup {
     display: inline-block;
     padding: 10px;

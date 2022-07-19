@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
-import Button from 'react-bootstrap/Button'
 import "./ItemList.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
+
 
 const onAddItem = (count) => {
     if (count == 1) {
@@ -29,6 +30,14 @@ function ItemList(props) {
                                         <Card.Text>${items.price}</Card.Text>
                                         <br></br>
                                     </Card.Body>
+                                    <Link to={`/item/${items.id}`} style={{ textDecoration: "none" }}>
+                                        <button
+                                            className="verMas btn btnClaro mb-2"
+                                            type="button"
+                                        >
+                                            Ver más
+                                        </button>
+                                    </Link>
                                     <ItemCount items={items} stock={items.stock} initial={0} onAdd={onAddItem} />
                                     <Card.Footer className="text-muted">Stock {items.stock}</Card.Footer>
                                 </Card>
