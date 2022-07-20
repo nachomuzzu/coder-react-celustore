@@ -1,39 +1,83 @@
-.itemDetailContainer{
-    font-weight: 400;
-    display: inline-block !important;
-}
-
-.btnContainer{
-    background-color: #2b2a2a !important;
-    margin-left: 24em;
-    width: 50%;
-    margin-top: 10em;
-}
-
-@media (max-width: 1200px) {
-    .btnContainer{
-        margin-left: 15em;
+    .details {
+        height: 100%;
+        width: 75%;
+        justify-content: center;
+        margin-bottom: 5em;
     }
     
-}
-
-@media (max-width: 990px) {
-    .btnContainer{
-        margin-left: 8em;
+    .itemDetailContainer {
+        font-weight: 400;
+        display: inline-block !important;
     }
     
+    .infoContainer>img {
+        margin-left: 5em;
+    }
+    
+    .detailContainer {
+        margin-left: 25em !important;
+        margin-top: -30em;
+    }
+    
+    .infoContainer .btnContainer {
+        background-color: #2b2a2a !important;
+        width: 50%;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 2em;
+    }
+    
+    .bgContainer {
+        height: 120% !important;
+    }
+    
+    
+
+
+
+@media (max-width: 991px) {
+
+    .bgContainer {
+        height: 100% !important;
+        margin-bottom: -1em !important;
+    }
+
+    .infoContainer {
+        margin-top: -3em;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+
+    .infoContainer img {
+        justify-content: center;
+            margin-left: 0;
+      
+    }
+
+    .detailContainer {
+        margin: 0% !important;
+        margin-left: 2em !important;
+        margin-top: 2em !important;
+    }
+    .bgContainer {
+        height: 90%;
+        padding: 5em;
+        margin-bottom: 5em;
+    }
+    .btnContainer{
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 767px) {
+        
+    .detailContainer {
+        margin-left: -2em !important;
+        padding: 0% !important;
+    }
     .btnContainer{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        width: 110% !important;
     }
 
-    .infoContainer{
-        display: block !important;
-        margin-top: 50em;
-    }
-    
 }
