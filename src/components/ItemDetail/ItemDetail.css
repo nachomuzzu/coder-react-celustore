@@ -4,21 +4,21 @@
         justify-content: center;
         margin-bottom: 5em;
     }
-    
+
     .itemDetailContainer {
         font-weight: 400;
         display: inline-block !important;
     }
-    
+
     .infoContainer>img {
         margin-left: 5em;
     }
-    
+
     .detailContainer {
         margin-left: 25em !important;
         margin-top: -30em;
     }
-    
+
     .infoContainer .btnContainer {
         background-color: #2b2a2a !important;
         width: 50%;
@@ -26,58 +26,67 @@
         border-radius: 5px;
         margin-top: 2em;
     }
-    
+
     .bgContainer {
         height: 120% !important;
     }
-    
-    
 
-
-
-@media (max-width: 991px) {
-
-    .bgContainer {
-        height: 100% !important;
-        margin-bottom: -1em !important;
-    }
-
-    .infoContainer {
-        margin-top: -3em;
-        display: flex !important;
-        justify-content: center !important;
+    .details {
+        position: relative;
+        min-height: 65vh;
+        margin-top: 3em;
     }
 
 
-    .infoContainer img {
-        justify-content: center;
+
+
+
+    @media (max-width: 991px) {
+
+        .bgContainer {
+            height: 100% !important;
+            margin-bottom: -1em !important;
+        }
+
+        .infoContainer {
+            margin-top: -3em;
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+
+        .infoContainer img {
+            justify-content: center;
             margin-left: 0;
-      
+
+        }
+
+        .detailContainer {
+            margin: 0% !important;
+            margin-left: 2em !important;
+            margin-top: 2em !important;
+        }
+
+        .bgContainer {
+            height: 90%;
+            padding: 5em;
+            margin-bottom: 5em;
+        }
+
+        .btnContainer {
+            width: 100% !important;
+        }
     }
 
-    .detailContainer {
-        margin: 0% !important;
-        margin-left: 2em !important;
-        margin-top: 2em !important;
-    }
-    .bgContainer {
-        height: 90%;
-        padding: 5em;
-        margin-bottom: 5em;
-    }
-    .btnContainer{
-        width: 100% !important;
-    }
-}
+    @media (max-width: 767px) {
 
-@media (max-width: 767px) {
-        
-    .detailContainer {
-        margin-left: -2em !important;
-        padding: 0% !important;
-    }
-    .btnContainer{
-        width: 110% !important;
-    }
+        .detailContainer {
+            margin-left: -2em !important;
+            padding: 0% !important;
+        }
 
-}
+        .btnContainer {
+            width: 110% !important;
+        }
+
+    }

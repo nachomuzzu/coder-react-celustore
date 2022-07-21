@@ -22,7 +22,7 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
     return (
         <>
             <div className="justify-content-center">
-              
+
                 <button
                     onClick={() => updateCount("-")}
                     className="btn btn-dark btnBg me-2 mb-2"

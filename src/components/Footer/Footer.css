@@ -1,16 +1,18 @@
-.nosotros{
+.nosotros {
     width: 80%;
     font-weight: 300;
 }
 
-.redes{
+.redes {
     font-weight: 300;
 }
 
-#bgFooter{
-    background-color: #2b2a2a !important; 
+#bgFooter {
+    background-color: #2b2a2a !important;
+    bottom: 0;
 }
-.bgCopyright{
-    background-color: #3b3b3b!important;
+
+.bgCopyright {
+    background-color: #3b3b3b !important;
     color: white;
 }

@@ -8,8 +8,7 @@ const CartWidget = () => {
           <span id="cantidadProductos" className="cart-badge text-black">
             0
           </span>
-        
-        <img style={{ width: 30 }} src={cartIcon} />
+          <img style={{ width: 30 }} src={cartIcon} />
         </a>
       </div>
     </>

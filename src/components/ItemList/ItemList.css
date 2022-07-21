@@ -1,22 +1,22 @@
-.card{
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.itemContainer{
-    width: 70% !important;
+.itemContainer {
+    width: 50% !important;
 }
 
-#container{
+#container {
     background-color: #f7f7f7;
 }
 
-.btn-bg{
+.btn-bg {
     background-color: #eeecec !important;
 }
 
-.btnClaro{
+.btnClaro {
     background-color: #f8f8f8 !important;
-  }
+}
 
 #cardGroup {
     display: inline-block;
@@ -24,17 +24,16 @@
 }
 
 
-@media (max-width: 930px) { 
+@media (max-width: 930px) {
     #cardGroup {
         margin-left: 12%
     }
- }
+}
 
- @media (max-width: 766px) { 
+@media (max-width: 766px) {
     #cardGroup {
         margin-left: 0;
         display: flex;
         justify-content: center;
     }
- }
-
+}
