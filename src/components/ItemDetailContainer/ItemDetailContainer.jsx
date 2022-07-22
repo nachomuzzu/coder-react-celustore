@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
     })
   }, [])
 
-  if (loading) return <div className='spinner mb-5 d-flex justify-content-center' >
+  if (loading) return <div className='spinner d-flex justify-content-center' >
     <Spinner animation="border" role="status">
       <span className="visually-hidden">Loading...</span>
     </Spinner></div>;
