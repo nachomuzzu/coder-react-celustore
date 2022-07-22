@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { Card } from "react-bootstrap";
 import './Hero.css'
-import image from '../../assets/img/samsung.jpg'
+import image from '../../assets/img/samsung.png'
 
 const Hero = () => {
   return (

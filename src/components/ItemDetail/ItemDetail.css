@@ -3,6 +3,7 @@
         width: 75%;
         justify-content: center;
         margin-bottom: 5em;
+        margin-top: 7em !important;
     }
 
     .itemDetailContainer {

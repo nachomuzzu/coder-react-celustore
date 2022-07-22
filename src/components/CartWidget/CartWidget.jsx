@@ -1,6 +1,6 @@
 import cartIcon from "../../assets/cart.svg"
 
-const CartWidget = () => {
+const CartWidget = ({amountItems}) => {
   return (
     <>
       <div className="wrapper me-2 mt-1 cart">

@@ -2,6 +2,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import './ItemDetail.css'
 
 const ItemDetail = ({ item }) => {
+
     return (
         <>
             <Container className='details p-5'>

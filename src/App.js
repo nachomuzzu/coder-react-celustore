@@ -6,18 +6,28 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import { useState } from 'react';
 
 function App() {
+  const [amountItems, setAmountItems] = useState(0);
   return (
     <>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<><Hero /> <ItemListContainer /> <Contact /></>} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <div className='app'>
+        <div className='pageContainer'>
+          <div className='contentWrapper'>
+            <BrowserRouter>
+              <NavBar amountItems={amountItems} />
+              <Routes>
+                <Route path='/' element={<><Hero /> <ItemListContainer /> <Contact /></>} />
+                <Route path='/item/:id' element={<ItemDetailContainer setAmountItems={setAmountItems} />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </div>
+      </div>
+      <Footer />
+
+      
     </>
   );
 }

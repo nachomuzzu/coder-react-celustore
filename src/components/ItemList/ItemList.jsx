@@ -13,7 +13,6 @@ const onAddItem = (count) => {
         alert(`¡${count} items serán añadidos al carrito!`);
     }
 }
-
 function ItemList(props) {
     return (
         <>

@@ -3,32 +3,33 @@ import ItemCount from '../ItemCount/ItemCount';
 import itemsData from "../../data/itemsData"
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
+import Spinner from 'react-bootstrap/Spinner';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer(props) {
-
-  //Guardar datos en un estado 
+  const { name } = useParams();
   const [items, setItems] = useState([]);
-
-  //Crear promesa que retorne los datos
+  const [loading, setLoading] = useState(false);
+  const promise = new Promise((resolve) => {
+    setTimeout(() => resolve(itemsData), 2000);
+  });
 
   useEffect(() => {
-    let promiseItems = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(itemsData);
-        reject("Ha ocurrido un error");
-      }, 2000);
-    })
-
-    promiseItems.then(
-      (respuesta) => {
-        setItems(itemsData);
+    setLoading(true);
+    promise.then((res) => {
+      const products = res;
+      if (name) {
+        setItems(products.find((product) => product.category == name));
+      } else {
+        setItems(products);
       }
-    ).catch((error) => {
-      console.error(error);
-    })
-  },
-    []
-  )
+      setLoading(false);
+    });
+  }, [name]);
+
+  if (loading) return <div className='mt-5 d-flex justify-content-center'><Spinner animation="border" role="status">
+  <span className="visually-hidden">Loading...</span>
+</Spinner></div>;
 
   return (
     <>

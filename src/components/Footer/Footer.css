@@ -1,3 +1,14 @@
+html{
+
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
 .nosotros {
     width: 80%;
     font-weight: 300;
@@ -8,8 +19,9 @@
 }
 
 #bgFooter {
-    background-color: #2b2a2a !important;
-    bottom: 0;
+    background-color: #2b2a2a !important;  
+    margin-top: auto;
+
 }
 
 .bgCopyright {

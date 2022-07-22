@@ -8,7 +8,9 @@ const data = [
     "stock": "5",
     "processor": "Hexa-core 2.39 GHz",
     "ram": "3GB",
-    "storage": "64GB"
+    "storage": "64GB",
+    "category": "Apple"
+
   },
   {
     "id": 2,
@@ -19,7 +21,8 @@ const data = [
     "stock": "2",
     "processor": "Hexa-core (2x Monsoon + 4x Mistral)",
     "ram": "2GB",
-    "storage": "64GB"
+    "storage": "64GB",
+    "category": "Apple"
   },
   {
     "id": 3,
@@ -30,7 +33,8 @@ const data = [
     "stock": "5",
     "processor": "Hexa-core (2x Monsoon + 4x Mistral)",
     "ram": "3GB",
-    "storage": "64GB"
+    "storage": "64GB",
+    "category": "Apple"
   },
   {
     "id": 4,
@@ -41,7 +45,8 @@ const data = [
     "stock": "3",
     "processor": "Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.7 GHz Kryo 385 Silver)",
     "ram": "4GB",
-    "storage": "64GB"
+    "storage": "64GB",
+    "category": "Samsung"
   },
   {
     "id": 5,
@@ -52,7 +57,8 @@ const data = [
     "stock": "2",
     "processor": "Octa-core (4x2.2 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)",
     "ram": "6GB",
-    "storage": "128GB"
+    "storage": "128GB",
+    "category": "OPPO"
   },
   {
     "id": 6,
@@ -63,7 +69,9 @@ const data = [
     "stock": "1",
     "processor": "Octa-core 2.2 GHz Cortex-A53",
     "ram": "3GB",
-    "storage": "32GB"
+    "storage": "32GB",
+    "category": "Sony"
+    
 
   }
 ]
