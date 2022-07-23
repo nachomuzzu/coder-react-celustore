@@ -1,7 +1,9 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount.jsx'
 
-const ItemDetail = ({ item }) => {
+
+const ItemDetail = ({ item, onAddItem }) => {
 
     return (
         <>
@@ -27,6 +29,8 @@ const ItemDetail = ({ item }) => {
                                     <h4>Almacenamiento</h4> {item.storage}
                                 </span>
                                 <h3 className='price mt-4'>${item.price}</h3>
+                                <ItemCount items={item} stock={item.stock} initial={0} onAdd={onAddItem} />
+                                <h5 className='text-muted stock'>¡Quedan {item.stock} unidades!</h5>
                                 <Button className='btnContainer btn-dark'>Agregar al carrito</Button>
                             </div>
                         </div>

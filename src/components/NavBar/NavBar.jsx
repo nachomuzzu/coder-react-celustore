@@ -6,7 +6,7 @@ import Logo from "../../assets/logo.svg"
 import CartWidget from "../CartWidget/CartWidget"
 import './NavBar.css'
 
-const NavBar = ({amountItems}) => {
+const NavBar = ({ amountItems }) => {
   return (
     <>
       <Navbar expand="lg">
@@ -26,8 +26,9 @@ const NavBar = ({amountItems}) => {
               <Nav.Link href="/">Inicio</Nav.Link>
               <Nav.Link href="#productos">Productos</Nav.Link>
               <Nav.Link href="#contacto">Contacto</Nav.Link>
-
-              <CartWidget amountItems={amountItems}/>
+              <div className="cartWidget">
+                <CartWidget amountItems={amountItems} />
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

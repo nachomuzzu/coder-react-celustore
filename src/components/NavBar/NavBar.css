@@ -8,3 +8,15 @@
     padding: 1em;
     background-color: #f8f8f8;
   }
+
+  @media (max-width: 991px) {
+    .navbar a{
+      display: flex !important;
+      justify-content: center;    
+    }
+    .cartWidget{
+      display: flex;
+     justify-content: end !important;
+    }
+    
+  }

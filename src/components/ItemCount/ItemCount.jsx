@@ -21,7 +21,7 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
 
     return (
         <>
-            <div className="justify-content-center">
+            <div className="itemCountContainer mt-5">
 
                 <button
                     onClick={() => updateCount("-")}
@@ -32,7 +32,7 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
                 </button>
                 <input
                     onChange={(e) => updateCountInput(e)}
-                    className="text-center input border-dark w-25 mb-2"
+                    className="text-center input border-dark mb-2"
                     placeholder=""
                     value={count}
                     type="number"
@@ -46,16 +46,7 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
                     +
                 </button>
             </div>
-            <div className="d-flex justify-content-center mb-2">
-                <button
-                    onClick={() => onAdd(count)}
-                    type="button"
-                    className="btn btn-dark btnBg"
-                    disabled={count === "" || count === 0}
-                >
-                    Agregar al carrito
-                </button>
-            </div>
+            
         </>
     );
 };

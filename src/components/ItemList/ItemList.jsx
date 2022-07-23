@@ -37,8 +37,6 @@ function ItemList(props) {
                                             Ver más
                                         </button>
                                     </Link>
-                                    <ItemCount items={items} stock={items.stock} initial={0} onAdd={onAddItem} />
-                                    <Card.Footer className="text-muted">Stock {items.stock}</Card.Footer>
                                 </Card>
                             </Col>
                         ))}

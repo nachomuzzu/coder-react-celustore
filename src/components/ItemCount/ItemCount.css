@@ -1,5 +1,7 @@
 .input {
   border: 0 !important;
+  background-color: rgba(43, 42, 42, 0);
+  width: 10% !important;
 }
 
 .verMas {
@@ -23,4 +25,24 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media (max-width: 991px) {
+
+  .itemCountContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .input{
+    width: 25% !important; 
+  }
+}
+
+@media (max-width: 767px) {
+
+.itemCountContainer{
+  justify-content: center !important;
+  margin-left: 2em;
+}
+
 }
