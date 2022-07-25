@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 import "./ItemCount.css"
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd }) => {
     const [count, setCount] = useState(initial);
@@ -21,32 +23,38 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
 
     return (
         <>
-            <div className="itemCountContainer mt-5">
+            <div className="itemCountContainer">
 
-                <button
+                <Button
                     onClick={() => updateCount("-")}
-                    className="btn btn-dark btnBg me-2 mb-2"
+                    className="btn btn-dark btnBg me-2"
                     type="button"
                 >
                     -
-                </button>
+                </Button>
                 <input
                     onChange={(e) => updateCountInput(e)}
-                    className="text-center input border-dark mb-2"
+                    className="text-center input border-dark"
                     placeholder=""
                     value={count}
                     type="number"
                 />
 
-                <button
+                <Button
                     onClick={() => updateCount("+")}
-                    className="btn btn-dark btnBg ms-2 mb-2"
+                    className="btn btn-dark btnBg ms-2"
                     type="button"
                 >
                     +
-                </button>
+                </Button>
             </div>
-            
+
+            <div className="mt-2">
+                <Link to={`/cart`} style={{ textDecoration: "none" }}>
+                    <Button disabled={count === "" || count === 0} onClick={onAdd(count)} className='cartButton btnContainer btn-dark'>Agregar al carrito</Button>
+                </Link>
+            </div>
+
         </>
     );
 };

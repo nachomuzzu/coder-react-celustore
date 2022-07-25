@@ -1,10 +1,13 @@
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx'
+import { useState } from 'react';
 
-
-const ItemDetail = ({ item, onAddItem }) => {
-
+const ItemDetail = ({ item }) => {
+    const [amount, setAmount] = useState(0);
+    const onAdd = (amount) => {
+        setAmount(amount);
+    }
     return (
         <>
             <Container className='details p-5'>
@@ -14,7 +17,6 @@ const ItemDetail = ({ item, onAddItem }) => {
                             <div className="infoContainer">
                                 <img className="justify-content-center" src={item.productImage} />
                             </div>
-
                             <div className='detailContainer'>
                                 <span className="mt-2">
                                     <h4>Modelo</h4> {item.productName}
@@ -29,9 +31,8 @@ const ItemDetail = ({ item, onAddItem }) => {
                                     <h4>Almacenamiento</h4> {item.storage}
                                 </span>
                                 <h3 className='price mt-4'>${item.price}</h3>
-                                <ItemCount items={item} stock={item.stock} initial={0} onAdd={onAddItem} />
-                                <h5 className='text-muted stock'>¡Quedan {item.stock} unidades!</h5>
-                                <Button className='btnContainer btn-dark'>Agregar al carrito</Button>
+                                <h6 className='text-muted stock mt-5'>¡Quedan {item.stock} unidades!</h6>
+                                <ItemCount items={item} initial={0} onAdd={onAdd} />
                             </div>
                         </div>
                     </Col>

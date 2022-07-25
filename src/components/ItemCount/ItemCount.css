@@ -4,14 +4,6 @@
   width: 10% !important;
 }
 
-.verMas {
-  display: flex !important;
-  justify-content: center !important;
-  text-align: center;
-  margin: auto;
-  margin-top: -15%;
-}
-
 .btnBg {
   background-color: #2b2a2a !important;
   color: white;
@@ -28,6 +20,12 @@ input[type=number] {
 }
 
 @media (max-width: 991px) {
+  .cartButton{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    }
+    
 
   .itemCountContainer {
     display: flex;
@@ -42,7 +40,6 @@ input[type=number] {
 
 .itemCountContainer{
   justify-content: center !important;
-  margin-left: 2em;
 }
 
 }

@@ -31,10 +31,10 @@ function ItemList(props) {
                                     </Card.Body>
                                     <Link to={`/item/${items.id}`} style={{ textDecoration: "none" }}>
                                         <button
-                                            className="verMas btn btnClaro mb-2"
+                                            className="verMas btn btn-dark mb-2"
                                             type="button"
                                         >
-                                            Ver más
+                                            Comprar
                                         </button>
                                     </Link>
                                 </Card>
