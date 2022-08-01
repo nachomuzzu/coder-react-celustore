@@ -18,7 +18,7 @@ const CartContext = ({children}) => {
     }
 
     const clear = () => {
-        setCartItems([];)
+        setCartItems([]);
     }
 
     const removeItem = (itemId) => {
