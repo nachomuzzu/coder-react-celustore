@@ -1,13 +1,21 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Button } from 'react-bootstrap';
 import './ItemDetail.css'
+import { Link } from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount.jsx'
-import { useState } from 'react';
+import { useState, useContext, useNavigate } from 'react';
+import { GContext } from '../Cart/CartContext';
+
 
 const ItemDetail = ({ item }) => {
+    
     const [amount, setAmount] = useState(0);
+    const {addItem} = useContext(GContext);
     const onAdd = (amount) => {
         setAmount(amount);
+        addItem(item, amount)
     }
+
+    console.log(addItem)
     return (
         <>
             <Container className='details p-5'>
@@ -32,7 +40,22 @@ const ItemDetail = ({ item }) => {
                                 </span>
                                 <h3 className='price mt-4'>${item.price}</h3>
                                 <h6 className='text-muted stock mt-5'>¡Quedan {item.stock} unidades!</h6>
-                                <ItemCount items={item} initial={0} onAdd={onAdd} />
+                                {amount === 0 ? (
+                  <ItemCount items={item} onAdd={onAdd} />
+                ) : (
+                    <div>
+                        <h2>¡{amount} item(s) han sido añadidos al carrito!</h2>
+                    <Link to={`/cart`} style={{textDecoration: "none"}}>
+                    <Button 
+                            type="button"
+                            className="ms-3 mt-2 btn btn-dark"
+                        >
+                            Ir al carrito
+                        </Button>
+                        </Link>
+                        </div>
+                )}
+                                {/* <ItemCount items={item} initial={0} onAdd={onAdd} /> */}
                             </div>
                         </div>
                     </Col>

@@ -7,6 +7,8 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import { useState } from 'react';
+import ItemList from './components/ItemList/ItemList';
+import CartContext from './components/Cart/CartContext';
 
 function App() {
   const [amountItems, setAmountItems] = useState(0);
@@ -15,13 +17,17 @@ function App() {
       <div className='app'>
         <div className='pageContainer'>
           <div className='contentWrapper'>
-            <BrowserRouter>
-              <NavBar amountItems={amountItems} />
-              <Routes>
-                <Route path='/' element={<><Hero /> <ItemListContainer /> <Contact /></>} />
-                <Route path='/item/:id' element={<ItemDetailContainer setAmountItems={setAmountItems} />} />
-              </Routes>
-            </BrowserRouter>
+            <CartContext>
+              <BrowserRouter>
+                <NavBar amountItems={amountItems} />
+                <Routes>
+                  <Route path='/' element={<><Hero /> <ItemListContainer /> <Contact /></>} />
+                  <Route path='/item/:id' element={<ItemDetailContainer setAmountItems={setAmountItems} />} />
+                  <Route path='/category/:name' element={<ItemListContainer />} />
+
+                </Routes>
+              </BrowserRouter>
+            </CartContext>
           </div>
         </div>
       </div>

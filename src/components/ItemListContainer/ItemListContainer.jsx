@@ -1,17 +1,15 @@
-import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount';
-import itemsData from "../../data/itemsData"
+import Data from "../../data/itemsData"
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
-import Spinner from 'react-bootstrap/Spinner';
 import { useParams } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
-function ItemListContainer(props) {
+ const ItemListContainer = () => {
   const { name } = useParams();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const promise = new Promise((resolve) => {
-    setTimeout(() => resolve(itemsData), 2000);
+    setTimeout(() => resolve(Data), 2000);
   });
 
   useEffect(() => {
@@ -19,7 +17,7 @@ function ItemListContainer(props) {
     promise.then((res) => {
       const products = res;
       if (name) {
-        setItems(products.find((product) => product.category == name));
+        setItems(Data.filter((data) => data.category == name));
       } else {
         setItems(products);
       }
@@ -27,15 +25,18 @@ function ItemListContainer(props) {
     });
   }, [name]);
 
-  if (loading) return <div className='mt-5 d-flex justify-content-center'><Spinner animation="border" role="status">
-  <span className="visually-hidden">Loading...</span>
-</Spinner></div>;
+  if (loading) return <div className='mb-5 spinner d-flex justify-content-center' >
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner></div>;
 
   return (
     <>
-      <div className='itemListcontainer'>
+      <div className="mt-5">
         <ItemList items={items} />
       </div>
-    </>)
+    </>
+  );
 };
+
 export default ItemListContainer;

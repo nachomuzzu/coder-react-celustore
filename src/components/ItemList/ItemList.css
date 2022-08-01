@@ -3,7 +3,7 @@
 }
 
 .itemContainer {
-    width: 50% !important;
+    width: 55% !important;
 }
 
 #container {
@@ -22,7 +22,6 @@
     display: inline-block;
     padding: 10px;
 }
-
 
 @media (max-width: 930px) {
     #cardGroup {
