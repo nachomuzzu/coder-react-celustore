@@ -53,6 +53,14 @@ const ItemDetail = ({ item }) => {
                             Ir al carrito
                         </Button>
                         </Link>
+                        <Link to={`/#productos`} style={{textDecoration: "none"}}>
+                    <Button 
+                            type="button"
+                            className="ms-3 mt-2 btn btn-light "
+                        >
+                            Seguir comprando
+                        </Button>
+                        </Link>
                         </div>
                 )}
                             </div>

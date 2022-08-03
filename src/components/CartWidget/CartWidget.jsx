@@ -12,10 +12,11 @@ const CartWidget = ({ styles }) => {
           <></>
         ) : (
           <div className={styles}>
-           <a className="text-decoration-none" href="/cart">
-             <img style={{ width: 30 }} src={cartIcon} />
-           </a>
-           </div>
+            <a className="text-decoration-none" href="/cart">
+              <span>{cartItems.reduce((accum, item) => accum + item.quantity, 0)}</span>
+              <img style={{ width: 30 }} src={cartIcon} />
+            </a>
+          </div>
         )}
       </>
     )
