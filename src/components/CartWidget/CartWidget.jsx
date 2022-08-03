@@ -1,18 +1,25 @@
-import cartIcon from "../../assets/cart.svg"
+import cartIcon from "../../assets/cart.svg";
+import React, { useContext } from 'react';
+import { GContext } from '../Cart/CartContext';
 
-const CartWidget = ({amountItems}) => {
+const CartWidget = ({ styles }) => {
+  const { cartItems } = useContext(GContext);
+
   return (
-    <>
-      <div className="wrapper me-2 mt-1 cart">
-        <a className="text-decoration-none" href="#">
-          <span id="cantidadProductos" className="cart-badge text-black">
-            0
-          </span>
-          <img style={{ width: 30 }} src={cartIcon} />
-        </a>
-      </div>
-    </>
-  );
+    (
+      <>
+        {cartItems.length === 0 ? (
+          <></>
+        ) : (
+          <div className={styles}>
+           <a className="text-decoration-none" href="/cart">
+             <img style={{ width: 30 }} src={cartIcon} />
+           </a>
+           </div>
+        )}
+      </>
+    )
+  )
 };
 
 export default CartWidget;

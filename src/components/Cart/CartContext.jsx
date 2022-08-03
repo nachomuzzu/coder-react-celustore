@@ -25,7 +25,14 @@ const CartContext = ({children}) => {
         setCartItems(cartItems.filter(element=>element.item.id !== itemId))
     }
 
-    return (<GContext.Provider value={{ cartItems , addItem }}>{children}</GContext.Provider>);
+    const total = () => {
+        return cartItems.reduce(
+          (valorAnterior, valorActual) => valorAnterior + valorActual.item.price * valorActual.quantity,
+          0
+        );
+      };
+
+    return (<GContext.Provider value={{ cartItems , addItem, removeItem, clear, total }}>{children}</GContext.Provider>);
 }
 
 export default CartContext;

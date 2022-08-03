@@ -48,14 +48,13 @@ const ItemDetail = ({ item }) => {
                     <Link to={`/cart`} style={{textDecoration: "none"}}>
                     <Button 
                             type="button"
-                            className="ms-3 mt-2 btn btn-dark"
+                            className="ms-3 mt-2 btn btn-dark "
                         >
                             Ir al carrito
                         </Button>
                         </Link>
                         </div>
                 )}
-                                {/* <ItemCount items={item} initial={0} onAdd={onAdd} /> */}
                             </div>
                         </div>
                     </Col>
