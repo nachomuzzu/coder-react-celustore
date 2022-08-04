@@ -4,6 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import itemsData from "../../data/itemsData"
 import { Spinner } from 'react-bootstrap';
 import './ItemDetailContainer.css'
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
@@ -17,12 +18,14 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    promise.then((response) => {
-      const foundItem = response.find(item => item.id === Number(id))
-      setItem(foundItem)
+    const db = getFirestore();
+    const itemDoc = doc(db, "items", id);
+    getDoc(itemDoc).then((snapshot) => {
+      setItem({ ...snapshot.data(), id: snapshot.id });
       setLoading(false);
-    })
-  }, [])
+      console.log(snapshot.data(), id);
+    });
+  }, [id]);
 
   if (loading) return <div className='spinner d-flex justify-content-center' >
     <Spinner animation="border" role="status">

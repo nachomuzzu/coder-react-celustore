@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     const { cartItems, removeItem, clear, total } = useContext(GContext);
     const tot = total();
-    // return (
     return (
         <>
             {cartItems.length === 0 ? (

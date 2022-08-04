@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./ItemList.css";
 import { Link } from "react-router-dom";
+
 function ItemList(props) {
     return (
         <>
@@ -33,6 +34,7 @@ function ItemList(props) {
                             className="btn btn-dark">Sony</button>
                     </Link>
                 </div>
+                
                 <Container className="itemContainer ">
                     <Row className="d-flex justify-content-center mb-5">
                         {props.items.map((items, k) => (
