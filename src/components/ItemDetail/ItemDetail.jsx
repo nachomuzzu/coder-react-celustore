@@ -15,7 +15,6 @@ const ItemDetail = ({ item }) => {
         addItem(item, amount)
     }
 
-    console.log(addItem)
     return (
         <>
             <Container className='details p-5'>

@@ -10,8 +10,6 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
-
-
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => resolve(itemsData), 2000)
   });
