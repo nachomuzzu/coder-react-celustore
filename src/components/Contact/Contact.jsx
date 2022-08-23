@@ -6,7 +6,7 @@ import { Row, Col, Container } from "react-bootstrap";
 
 const Contact = () => {
     const onSubmitHandler = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         const textArea = document.getElementsByTagName("textarea")
     }
 
@@ -16,7 +16,7 @@ const Contact = () => {
                 <h2 className='d-flex justify-content-center'>¿Nos querés contactar? ¡Hacelo acá!</h2>
                 <Col xs={12} md={12} lg={12}>
                     <Form onSubmit={onSubmitHandler} id="contactContainer">
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Nombre</Form.Label>
                             <Form.Control type="text" placeholder="Ingrese nombre" />
                         </Form.Group>

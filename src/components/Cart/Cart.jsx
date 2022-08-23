@@ -3,17 +3,22 @@ import { Button } from 'react-bootstrap'
 import { GContext } from './CartContext';
 import CartItem from "./CartItem";
 import { Link } from 'react-router-dom'
-import Container from "react-bootstrap/esm/Container";
+import { Row, Col, Container } from "react-bootstrap";
+import Form from 'react-bootstrap/Form';
+import "./Cart.css"
 
-const Cart = () => {
-    const { cartItems, removeItem, clear, total, sendOrder } = useContext(GContext);
+const Cart = (amount) => {
+    const { cartItems, removeItem, clear, sendOrder } = useContext(GContext);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [showIdCompra, setIdCompra] = useState(false);
+
+    const onClick = () => setIdCompra(true)
+    console.log(sendOrder.respuesta)
     const handleSubmit = (e) => {
         e.preventDefault();
         const inputs = document.getElementsByTagName("input");
         const data = Array.from(inputs).map((input, index) => input.value);
         sendOrder(totalPrice, { name: data[0], mail: data[1], phone: data[2] });
-        console.log(data)
     }
 
     useEffect(() => {
@@ -32,7 +37,6 @@ const Cart = () => {
                         <Link to="/"><Button className="btn-dark ms-3">Volver</Button></Link>
                     </div>
                 </>
-
             ) : (
                 <>
                     {cartItems.map((element) => (
@@ -41,31 +45,48 @@ const Cart = () => {
 
                     <h2 className="ms-5">{`El total de su compra es de: $${totalPrice}`}</h2>
 
-
                     <Button className="mt-5 btn-dark d-flex justify-content-end" style={{ marginLeft: "80%" }} onClick={() => clear()}>
                         Vaciar Carrito
                     </Button>
 
-                <Container className='p-5 mt-3 d-flex justify-content-center' style={{backgroundColor: '#f7f7f7'}}>
-                    <h3 className="d-flex justify-content-center">Datos de contacto</h3>
-                <form  className='ms-5' onSubmit={handleSubmit}>
-                        Nombre <input type='text' className='ms-1 mb-2'  /> <br></br>
-                        Email <input type='email' className='ms-4 mb-2' /> <br></br>
-                        Teléfono <input type='tel' className="ms-1" /> <br></br>
-                        <button
-                            type="submit" className="btn mt-2 btn-success d-flex justify-content-end mb-3" style={{ marginLeft: "80%" }}
-                        >
-                            Enviar orden
-                        </button>
-                    </form>
-                </Container>
-                   
-
+                    <Container className='p-5' id='contacto' style={{ backgroundColor: '#f7f7f7' }}>
+            <Row>
+                <h2 className='d-flex justify-content-center'>Ingrese sus datos de contacto para finalizar la compra</h2>
+                <Col xs={12} md={12} lg={12}>
+                    <Form onSubmit={handleSubmit} id="contactContainer">
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Nombre y apellido</Form.Label>
+                            <Form.Control type="text" placeholder="Ingrese nombre" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Dirección de email</Form.Label>
+                            <Form.Control type="email" placeholder="Ingrese email" />
+                            <Form.Text className="text-muted">
+                                No compartiremos tu email con nadie.
+                            </Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Dirección de email</Form.Label>
+                            <Form.Control type="email" placeholder="Ingrese email nuevamente" />
+                            <Form.Text className="text-muted">
+                                No compartiremos tu email con nadie.
+                            </Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Número de teléfono</Form.Label>
+                            <Form.Control type="tel" placeholder="Ingrese teléfono" />
+                        </Form.Group>
+                        <Button variant="dark" type="submit" className='mb-3'>
+                            Enviar
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container>
                 </>
             )}
         </>
     );
-
 }
 
 export default Cart;

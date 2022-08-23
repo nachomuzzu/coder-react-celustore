@@ -11,7 +11,7 @@ const NavBar = ({ amountItems }) => {
     <>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="/" id="title">            <img
+          <Navbar.Brand href="/" id="title"><img
             alt=""
             src={Logo}
             width="30"

@@ -10,7 +10,6 @@ const Hero = () => {
       <Card.Img className="heroImg" variant="top" src={image} alt="Varios celulares Samsung" />
       </div>
       <Card.Body style={{backgroundColor: '#f8f8f8'}}>
-
         <Button variant="dark" href='#productos'>Ver catálogo</Button>
       </Card.Body>
     </Card>

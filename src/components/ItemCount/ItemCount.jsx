@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./ItemCount.css"
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd }) => {
@@ -70,6 +69,5 @@ const ItemCount = ({ items = { items }, stock = items.stock, initial = 0, onAdd 
     );
 
 };
-
 
 export default ItemCount;

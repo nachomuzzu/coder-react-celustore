@@ -1,0 +1,11 @@
+.swal-button--confirm{
+    background-color: #2b2b2b;
+}
+
+.swal-button--confirm:hover{
+    background-color: #504f4f !important;
+}
+
+.cartForm{
+    display: flex;
+}
