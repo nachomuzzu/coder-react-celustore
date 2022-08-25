@@ -25,7 +25,6 @@ function App() {
                   <Route path='/item/:id' element={<ItemDetailContainer setAmountItems={setAmountItems} />} />
                   <Route path='/category/:name' element={<ItemListContainer />} />
                   <Route path='/cart' element={<Cart />} />
-
                 </Routes>
               </BrowserRouter>
             </CartContext>
