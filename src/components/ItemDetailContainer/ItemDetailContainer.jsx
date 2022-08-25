@@ -21,7 +21,6 @@ const ItemDetailContainer = () => {
     getDoc(itemDoc).then((snapshot) => {
       setItem({ ...snapshot.data(), id: snapshot.id });
       setLoading(false);
-      console.log(snapshot.data(), id);
     });
   }, [id]);
 
