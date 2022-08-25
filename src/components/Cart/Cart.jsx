@@ -45,7 +45,7 @@ const Cart = (amount) => {
 
                     <h2 className="ms-5">{`El total de su compra es de: $${totalPrice}`}</h2>
 
-                    <Button className="mt-5 btn-dark d-flex justify-content-end" style={{ marginLeft: "80%" }} onClick={() => clear()}>
+                    <Button className="mt-5 mb-5 btn-dark d-flex justify-content-end" style={{ marginLeft: "80%" }} onClick={() => clear()}>
                         Vaciar Carrito
                     </Button>
 
