@@ -1,6 +1,6 @@
 #CeluStore
 
-App creada usando React
+App estilo eCommerce creada usando React
 
 Pasos para correr la aplicacíon:
 
